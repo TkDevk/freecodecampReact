@@ -30,11 +30,11 @@ const getHeroById = (id) =>{
 //CallBack
 console.log(getHeroById(2))
 
-const gettingHero = (id) => {
+export const gettingHero = (id) => {
    return heroes.find( (heroe)=> heroe.id===id)
 }
 //method find returns the first value in the provided array that satisfies the provided testing function
-console.log(gettingHero(3))
+//console.log(gettingHero(3))
 
 //e.g: const found = array1.find((element) => element > 10);
 const gettingFasterHero = (id) => heroes.find((heroex) => heroex.id === id);
@@ -45,6 +45,6 @@ console.log(getHerosByOwner('DC'))
 
 //Filter since i need to find more than 1 value
 
-const getHeroeByOwner = (owner) => heroes.filter((ow)=> ow.owner===owner);
+export const getHeroeByOwner = (owner) => heroes.filter((ow)=> ow.owner===owner);
 console.log(getHeroeByOwner('Marvel'))
 //f2
