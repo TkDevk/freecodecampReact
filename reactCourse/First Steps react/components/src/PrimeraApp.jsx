@@ -23,8 +23,8 @@ const PrimeraApp = ({saludo, ejemplo, parrafo}) => {  //const PrimeraApp = ({sal
 
     return (
         <>
-            <h1>Hola gonorrea</h1>
-            <p>Gonorrea</p>
+            <h1>Hola </h1>
+            <p>Primer Parrafo</p>
             <p>{ saludo }</p> {/**props.saludo */}
             <p>{ ejemplo}</p>
             <p>{ parrafo}</p>
