@@ -1,33 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'; 
+import './index.css'
+import PropTypes from 'prop-types'
 import './App.css'
 
+
+class MyComponent extends React.Component{
+  constructor(props){
+    super(props);
+  }
+render(){
+  return(
+     
+   <article>
+    <CompFunction quantity={30}/>
+    </article>
+  );
+}
+}
+
+/**I get it that i have to create a component in a diferent file */
+
+const CompFunction=(props)=>{
+  return <h1> Holaaa {props.quantity}</h1>
+}
+
+
+CompFunction.defaultProps={
+  quantity:0
+};
+CompFunction.propTypes = {
+  quantity: PropTypes.number.isRequired
+}
+
+/*
+const root = ReactDOM.createRoot(document.getElementById('root')); //React Dom can modify dom
+root.render(<MyComponent />)
+
+//This is a stateless component
+*/
+
+
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+     <MyComponent/>
     </>
   )
 }
